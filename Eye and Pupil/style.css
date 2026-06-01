@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 200px;
+  width: 200px;
+  background: #0b0b0b;
+  border-radius: 120px;
+  corner-shape: squircle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .eye {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background: #ebebeb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .pupil {
+      height: 80px;
+      width: 80px;
+      background: #161616;
+      border-radius: 50%;
+      position: absolute;
+      transition: 0.2s;
+    }
+    
+    .eyelid {
+      position: absolute;
+      top: 0;
+      /* height: 100%; */
+      width: 100%;
+      background: #0b0b0b;
+      animation: blink 8.17s linear infinite;
+    }
+  }
+}
+
+@keyframes blink {
+  0%, 5%, 100% {
+    height: 0;
+  }
+  2% {
+    height: 100%;
+  }
+}
