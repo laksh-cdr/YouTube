@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden; /* Hide scrollbars */
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background: #212232;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thread {
+  position: absolute;
+  width: 4px;
+  height: 450px;
+  background: #aaaaaa;
+  top: -2px;
+  display: flex;
+  justify-content: center;
+  transform-origin: top center;
+  animation: swing 4s cubic-bezier(0.68, 0.03, 0.32, 0.98) infinite;
+}
+
+.ball {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #aaaaaa;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  animation: rotate 4s cubic-bezier(0.68, 0.03, 0.32, 0.98) infinite; /* Makes the ball's rotation fixed */
+  box-shadow: 0 0 20px #aaaaaa9e, 0 0 40px #aaaaaa9e, 0 0 80px #aaaaaa9e;
+}
+
+.ball::before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: -10%;
+  left: -10%;
+  border-radius: 50%;
+  background: #cccccc;
+}
+
+.ball::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: -10%;
+  left: -10%;
+  border-radius: 50%;
+  background: #dddddd;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(60deg);
+  }
+  50% {
+    transform: rotate(-60deg);
+  }
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-60deg);
+  }
+  50% {
+    transform: rotate(60deg);
+  }
+  100% {
+    transform: rotate(-60deg);
+  }
+}
