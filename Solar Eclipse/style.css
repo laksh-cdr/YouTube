@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: hsl(197, 55%, 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun {
+  height: 200px;
+  width: 200px;
+  background: #fffbe7;
+  border-radius: 50%;
+}
+
+.moon {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: #000;
+  border-radius: 50%;
+}
